@@ -13,8 +13,7 @@ public class MakeTerrain : MonoBehaviour
 
         for (int v = 0; v < vertices.Length; v++)
         {
-            vertices[v].y = Random.Range(0f, 10f); // generates new value for the height of each vertice
-
+            vertices[v].y = Mathf.Sin(vertices[v].x * 10);
         }
 
         mesh.vertices = vertices;
